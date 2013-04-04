@@ -1,32 +1,36 @@
 Bookish
 ================================================================================
 
+Simple thumbnail viewer
+
+
 Requirements
 --------------------------------------------------------------------------------
 
 - Apache2
-- PHP 5.4
+- PHP 5.3
 
 
 Getting Started
 --------------------------------------------------------------------------------
 
-### Book directory structure
+### Books directory structure
 
 ```
 $HOME/Sites/mybooks/
-|-- Book1
-|   |-- 00.jpg
-|   |-- 01.jpg
-|   `-- 02.jpg
-|-- Book2
-|   |-- 00.jpg
-|   |-- 01.jpg
-|   `-- 02.jpg
-`-- index.php
+    |-- Book1
+    |   |-- 000.jpg
+    |   |-- 001.jpg
+    |   `-- 002.jpg
+    |
+    |-- Book2
+    |   |-- 000.png
+    |   |-- 001.png
+    |   `-- 002.png
+    `-- index.php
 ```
 
-### Mountain Lion
+### OSX Mountain Lion
 
 Enable the php5 module:
 
