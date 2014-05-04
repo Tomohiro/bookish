@@ -42,6 +42,7 @@ header('Pragma: no-cache');
 <head>
     <title><?= $_GET['title'] ?> <?= basename(dirname($_SERVER['SCRIPT_FILENAME'])) ?></title>
     <meta charset="UTF-8">
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
     <style>
     img.cover { width: 200px; height: 300px; }
     img.page { width: auto; height: auto; }
@@ -49,7 +50,7 @@ header('Pragma: no-cache');
     li { margin: 20px; float: left; }
     </style>
 </head>
-<body>
+<body class="container">
 <ul>
 <?php
 if ($action == 'index') {
