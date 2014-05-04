@@ -7,8 +7,8 @@ Simple thumbnail viewer
 Requirements
 --------------------------------------------------------------------------------
 
-- Apache2
-- PHP 5.3
+- Apache 2
+- PHP 5.4
 
 
 Getting Started
@@ -30,7 +30,11 @@ $HOME/Sites/mybooks/
     `-- index.php
 ```
 
-### OSX Mountain Lion
+### OS X Mavericks
+
+Enable autoload settings to launchctl:
+
+    $ sudo launchctl load -w /System/Library/LaunchDaemons/org.apache.httpd.plist
 
 Enable the php5 module:
 
@@ -51,7 +55,7 @@ Configuration test:
 
 Start the Apache2
 
-    $ sudo apachectl start
+    $ sudo apachectl restart
 
 
 Access to `http://localhost/~myname/mybooks/`
@@ -60,6 +64,6 @@ Access to `http://localhost/~myname/mybooks/`
 LICENSE
 --------------------------------------------------------------------------------
 
-&copy; 2013 Tomohiro TAIRA.
+&copy; 2014 Tomohiro TAIRA.
 This project is licensed under the MIT license.
 See LICENSE for details.
