@@ -16,7 +16,7 @@ Getting Started
 
 ### Books directory structure
 
-```
+```sh
 $HOME/Sites/mybooks/
     |-- Book1
     |   |-- 000.jpg
@@ -34,29 +34,38 @@ $HOME/Sites/mybooks/
 
 Enable autoload settings to launchctl:
 
-    $ sudo launchctl load -w /System/Library/LaunchDaemons/org.apache.httpd.plist
+```sh
+$ sudo launchctl load -w /System/Library/LaunchDaemons/org.apache.httpd.plist
+```
 
 Enable the php5 module:
 
-    $ sudo vim /etc/apache2/httpd.conf
-    #LoadModule perl_module libexec/apache2/mod_perl.so
-    LoadModule php5_module libexec/apache2/libphp5.so
+```sh
+$ sudo vim /etc/apache2/httpd.conf
+#LoadModule perl_module libexec/apache2/mod_perl.so
+LoadModule php5_module libexec/apache2/libphp5.so
+```
 
 Enable user directory:
 
-    $ sudo vim /private/etc/apache2/users/myname.conf
-    <Directory "/Users/myname/Sites">
-      Allow from all
-    </DIrectory>
+```sh
+$ sudo vim /private/etc/apache2/users/myname.conf
+<Directory "/Users/myname/Sites">
+    Allow from all
+</Directory>
+```
 
 Configuration test:
 
-    $ sudo apachectl configtest
+```sh
+$ sudo apachectl configtest
+```
 
 Start the Apache2
 
-    $ sudo apachectl restart
-
+```sh
+$ sudo apachectl restart
+```
 
 Access to `http://localhost/~myname/mybooks/`
 
