@@ -1,10 +1,10 @@
 <?php
 function files($path)
 {
-    $files = array();
+    $files = [];
 
     if (is_dir($path)) {
-        $ignores = array('.', '..', '.DS_Store', 'index.php', 'Thumbs.db');
+        $ignores = ['.', '..', '.DS_Store', 'index.php', 'Thumbs.db'];
         foreach (scandir($path) as $file) {
             if (in_array($file, $ignores)) continue;
             $files[] = $file;
@@ -25,12 +25,12 @@ switch ($action) {
         break;
     case 'index':
     default:
-        $books = array();
+        $books = [];
         foreach (files($base_path) as $title) {
-            $books[$title] = array(
+            $books[$title] = [
                 'path'   => "$base_path/$title",
                 'images' => files("$base_path/$title")
-            );
+            ];
         }
         break;
 }
